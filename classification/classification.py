@@ -38,6 +38,8 @@ X_train, X_test, y_train, y_test = train_test_split(df, target, test_size=0.2, r
 #####################################
 
 # Création et entraînement
+# class_weight permet de prendre en compte le déséquilibre des classes
+# Donne un poids plus fort aux classes minoritaires
 log_model = LogisticRegression(class_weight='balanced')
 log_model.fit(X_train, y_train)
 
